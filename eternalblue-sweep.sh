@@ -1,5 +1,5 @@
 #!/bin/sh
-for each in $(cat internal-serve-targets.list);
+for each in $(cat internal-targets.list);
 	do /root/toolz/masscan/bin/masscan --rate 1000 -e eth1 -p445 -oG outfile --range $each;
 	done;
 
